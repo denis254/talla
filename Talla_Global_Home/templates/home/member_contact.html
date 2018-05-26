@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Talla Global - Member Page
+{% endblock %}
+
+{% block content %}
+{% include "navbar.html" %}
+{% if request.user.is_authenticated %}
+
+<h2 align = "center">Welcome, <b>{{ user.first_name }}</b></h2>
+<br>
+<div class= "row" align = "center">
+<div class="col-md-6 " >
+  <h4 style="color:blue">Contact Us</h4>
+<p>
+  Our Support team is more than happy to answer any questions you may have.
+</p><p>
+  Due to the huge number of requests our support team has launched a modern online ticketing system to quickly solve your problems.
+</p><p>
+  If you would like us to help you kindly send us a support ticket by clicking on the support button above and click create ticket. This is the fastest way of communicating to our support team.
+</p><p>
+  You may also send an email to support@tallaglobal.com or call the phone numbers provided in the Home page for the region you are calling from.
+</p><p>
+</div>
+<div class="col-md-6 " >
+<img src="{% static "img/contact-us-k.png"  %}" alt="My image" />
+</div>
+</div>
+
+{% else %}
+
+<p>You are not logged in</p>
+
+<a href="{% url 'login' %}">login</a>
+
+{% endif %}
+<br><br><br><br><br><br>
+{% include "footer.html" %}
+{% endblock %}

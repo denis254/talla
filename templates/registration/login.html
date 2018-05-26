@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Login to Craft sales
+{% endblock %}
+
+{% block content %}
+{% include "navbar.html" %}
+<div align = "center">
+<br>
+<br>
+<h1  style="color:blue" >Talla Global</h1>
+<hr>
+{% if messages %}
+
+    {% for message in messages %}
+    <div style="color:red">{{ message }}</div>
+    {% endfor %}
+
+{% endif %}
+
+<h1>Login</h1>
+<form method="post" >
+  {% csrf_token %}
+
+{{form.as_p}}
+
+  <button  class="btn btn-primary" type="submit"><h5>Member Sign In</h5></button>
+</form>
+
+<br>
+<div style="color:blue"><a href="/register/"><b> Join Free </b> </a>  |  <a href="/accounts/password_reset/"> <b> Forgot your password? </b></a></div>
+</div><br><br><br><br><br>
+{% include "footer.html" %}
+{% endblock %}

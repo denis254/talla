@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Talla Global - Member Page
+{% endblock %}
+
+{% block content %}
+{% include "navbar.html" %}<br>
+<br>
+<div class= "row">
+<div class="col-md-4 " align = "center" >
+  <div class="card">
+<h2 style="color:blue" >STARTER</h2>
+  <br>
+  <div class="card-header bg-primary"><b><h3 align = center>KSH. 4000</font> /year</h1><h3><b></div>
+  <p>Surveys per week: 2</p>
+<p>Min Earnings/Survey: 500</p>
+<p>Earnings With 5 refferals: 2000/week</p>
+<p>Earnings with 10 refferals: 3000/week</p>
+<p>Earnings With 20 refferals: 5000/week</p>
+<p>Earnings With 50 refferals: 11000/week</p>
+<p>Payments After Every 4 surveys</p>
+<p>Get Paid Every Monday</p>
+<hr>
+<a href="/accounts/login/" ><button  class="btn btn-primary" type="submit"><h5>LOGIN TO CHOOSE PLAN</h5></button></a>
+</div>
+</div>
+
+<div class="col-md-4 " align = "center">
+    <div class="card">
+<h2 style="color:blue" >BUSINESS</h2>
+  <br>
+<div class="card-header bg-primary"><b><h3 align = center>KSH. 8000</font> /year</h1><h3><b></div>
+  <p>Surveys per week: 4</p>
+  <p>Min Earnings/Survey: 500</p>
+  <p>Earnings With 5 refferals: 3000/week</p>
+  <p>Earnings with 10 refferals: 4000/week</p>
+  <p>Earnings With 20 refferals: 6000/week</p>
+  <p>Earnings With 50 refferals: 12000/week</p>
+  <p>Payments After Every 4 surveys</p>
+  <p>Above is if your refferal is a starter level</p>
+  <p>Get Paid Every Monday</p>
+  <hr>
+  <a href="/accounts/login/" ><button  class="btn btn-primary" type="submit"><h5>LOGIN TO CHOOSE PLAN</h5></button></a>
+</div>
+</div>
+<div class="col-md-4 " >
+<div align = "center">
+<h2 style="color:blue">PROFESSIONAL</h2>
+  <br>
+  <div class="card-header bg-primary"><b><h3 align = center>KSH. 15000</font> /year</h1><h3><b></div>
+  <p>Surveys per week: 8</p>
+  <p>Min Earnings/Survey: 500</p>
+  <p>Earnings With 5 refferals: 5000/week</p>
+  <p>Earnings with 10 refferals: 6000/week</p>
+  <p>Earnings With 20 refferals: 8000/week</p>
+  <p>Earnings With 50 refferals: 14000/week</p>
+  <p>Payments After Every 4 surveys</p>
+  <p>Above is if your refferal is a starter level</p>
+  <p>Get Paid Every Monday</p>
+  <hr>
+  <a href="/accounts/login/" ><button  class="btn btn-primary" type="submit"><h5>LOGIN TO CHOOSE PLAN</h5></button></a>
+</div>
+</div>
+</div><br><br><br><br><br>
+{% include "footer.html" %}
+{% endblock %}

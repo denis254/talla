@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Talla Global - Member Page
+{% endblock %}
+
+{% block content %}
+{% include "navbar.html" %}
+{% if request.user.is_authenticated %}
+
+<h2 align = "center">Welcome, <b>{{ user.first_name }}</b></h2>
+<br>
+<h4 style="color:blue">Account upgrade</h4>
+<p align = "center">Premium Subscriptions are meant for Members who wish to Do Market research as A full time job and most
+   Companies prefer sending their surveys to Vetted and profiled members hence we charge a small annual membership
+    & administration fee for this.</p><hr>
+    <p align = "center">Your current account type:<b> {{ user.profile.User_Type }}</b></p>
+    <h4>Cash balance</h4>
+    <h1><b>{{ user.profile.Cash_Balance }}</b></h1>
+    <p>Used to upgrade</p><br>
+<hr>
+<div class= "row" align = "center">
+<div class="col-md-3 " >
+  <h2 style="color:blue" >DEFAULT</h2>
+    <br>
+<div class="card-header bg-primary"><b><h3 align = center>Free Trial</h1><h3><b></div>
+  <p>  Surveys per week: 1</p>
+<p>Your Income/survey: kshs.500</p>
+<p>Account Expires after 14days</p>
+<p>Earn a minimum of kshs.500/week</p>
+<p>All your funds remain even after upgrade</p>
+<p>Refferal income limited to premium refferals only</p>
+<p>This is a test account to orient you to the platform</p><hr>
+</div>
+<div class="col-md-3 " >
+  <div align = "center">
+<h2 style="color:blue" >STARTER</h2>
+  <br>
+<div class="card-header bg-primary"><b><h3 align = center>KSH. 4000</font> /yr</h1><h3><b></div>
+  <p>Surveys per week: 2</p>
+<p>Min Earnings/Survey: 500</p>
+<p>Earnings With 5 refferals: 2000/week</p>
+<p>Earnings with 10 refferals: 3000/week</p>
+<p>Earnings With 20 refferals: 5000/week</p>
+<p>Earnings With 50 refferals: 11000/week</p>
+<p>Payments After Every 4 surveys</p>
+<p>Get Paid Every Monday</p>
+<hr>
+</div>
+</div>
+<div class="col-md-3 " >
+  <div align = "center">
+<h2 style="color:blue" >BUSINESS</h2>
+  <br>
+<div class="card-header bg-primary"><b><h3 align = center>KSH. 8000</font> /yr</h1><h3><b></div>
+  <p>Surveys per week: 4</p>
+  <p>Min Earnings/Survey: 500</p>
+  <p>Earnings With 5 refferals: 3000/week</p>
+  <p>Earnings with 10 refferals: 4000/week</p>
+  <p>Earnings With 20 refferals: 6000/week</p>
+  <p>Earnings With 50 refferals: 12000/week</p>
+  <p>Payments After Every 4 surveys</p>
+  <p>Above is if your refferal is a starter level</p>
+  <p>Get Paid Every Monday</p>
+  <hr>
+</div>
+</div>
+<div class="col-md-3 " >
+<div align = "center">
+<h2 style="color:blue">PROFESSIONAL</h2>
+  <br>
+<div class="card-header bg-primary"><b><h3 align = center>KSH. 15000</font> /yr</h1><h3><b></div>
+  <p>Surveys per week: 8</p>
+  <p>Min Earnings/Survey: 500</p>
+  <p>Earnings With 5 refferals: 5000/week</p>
+  <p>Earnings with 10 refferals: 6000/week</p>
+  <p>Earnings With 20 refferals: 8000/week</p>
+  <p>Earnings With 50 refferals: 14000/week</p>
+  <p>Payments After Every 4 surveys</p>
+  <p>Above is if your refferal is a starter level</p>
+  <p>Get Paid Every Monday</p>
+  <hr>
+</div>
+</div>
+</div>
+<br>
+
+<div class= "row" align = "center">
+<div class="col-md-6 " >
+<img src="{% static "img/tell-us-what-you-think.png"  %}" alt="My image" />
+
+</div>
+<div class="col-md-6 " >
+
+<p>
+  1. Go to M-PESA Menu on your phone
+</p>
+<p>
+  2. Select Pay Bill under the Lipa Na M-Pesa
+</p>
+<p>
+  3. Enter Our Agent's Business Number -711693(Generosys Holdings)
+</p>
+<p>
+  4. Enter Account Number - "your username"
+</p>
+<p>
+  5. Enter Amount
+</p>
+<p>
+  6. Enter your M-PESA PIN
+</p>
+<p>
+  7. Send and wait for SMS receipt
+</p>
+<p>
+  8. Once you get the Mpesa confirmation Message kindly click on Support Above.
+</p>
+<p>
+  9. Create a support ticket indicating your username and phone number used to pay for our support team to upgrade your account.
+</p>
+<p>
+  10. For any queries with regards to Mpesa payments call +254-700-817-957 for assistance
+</p>
+<p>
+  Your phone number (Mpesa): +25470246262
+</p>
+<p>
+</div>
+</div>
+
+{% else %}
+
+<p>You are not logged in</p>
+
+<a href="{% url 'login' %}">login</a>
+
+{% endif %}
+{% include "footer.html" %}
+{% endblock %}
