@@ -25,7 +25,7 @@ SECRET_KEY = '=(*n-3qfkabcmi^c-#!vc&yx3gc0=8wz@*!4iiwhc2t%2(n32'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['tallaglobal.herokuapp.com']
 
 
 # Application definition
