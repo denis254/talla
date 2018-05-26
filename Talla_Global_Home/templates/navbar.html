@@ -2,7 +2,7 @@
 {% load static %}
 {% block navbar %}
  {% if request.user.is_authenticated %}
-<div class="w3-bar w3-top w3-blue w3-padding-16 w3-large">
+<div class="w3-bar  w3-blue w3-padding-16 w3-large">
   <a href="/member_home/" class="w3-bar-item w3-button">Talla Global</a>
   <a href="/member_home/" class="w3-bar-item w3-button w3-hide-small">Member Home</a>
   <a href="/deposit/" class="w3-bar-item w3-button w3-hide-small">Deposit $ Upgrade</a>
@@ -18,7 +18,7 @@
   <a href="/accounts/logout/" class="w3-bar-item w3-button">Logout</a>
 </div>
  {% else %}
-<div class="w3-bar w3-top w3-blue w3-padding-16 w3-large">
+<div class="w3-bar  w3-blue w3-padding-16 w3-large">
   <a href="/home/" class="w3-bar-item w3-button">Talla Global</a>
   <a href="/home/" class="w3-bar-item w3-button w3-hide-small">Home</a>
   <a href="/contact/" class="w3-bar-item w3-button w3-hide-small">Contact</a>
