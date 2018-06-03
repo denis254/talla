@@ -7,10 +7,11 @@
 {% block content %}
 <br>
 {% include "navbar.html" %}
+<div id="outer">
 <div class= "row" align = "center">
 
-  <h2 align = "center"><b> Member Sign Up</b></h2>
-  <hr>
+<h2 class="h4" align = "center"><b>Member Sign Up</b></h2>
+
 <div class="col-md-4 " >
   <p>
 Create your member account and enter a new world of online earning possibilities.
@@ -18,20 +19,17 @@ Create your member account and enter a new world of online earning possibilities
 <p>
 Talla Global Values your Opinion and rewards you for your honesty and the time that you spend while responding to our surveys
 </p><br>
-<p><i>
-  By pressing the get started button i agree to the terms and conditions of Talla Global
-  <a href="/licence/" style="color: blue">here</a>.
-</i></p>
+
 </div>
 
 
 <div  class="col-md-8">
-  <p align = "center" style="color:red">* Username is your M-Pesa Phone Number</p>
+
   <form method="post">
     {% csrf_token %}
     {% for field in form %}
    <p>
-     <div  class="col-md-5">{{ field.label_tag }}</div>
+    <div style="color:blue"> {{ field.label_tag }} </div>
      {{ field }}
 
      {% for error in field.errors %}
@@ -41,16 +39,19 @@ Talla Global Values your Opinion and rewards you for your honesty and the time t
  {% endfor %}
     <br>
 <div align = "center">
-    <p>* All fields required </p>
 
-    <button type="submit" class="btn btn-success" ><h5>GET STARTED NOW</h5></button>
+    <button type="submit" class="btn btn-success button5 button3" ><h5>GET STARTED NOW</h5></button>
 </div>
 
   </form>
 </div>
-
+<p><i>
+  By pressing the get started button i agree to the terms and conditions of Talla Global
+  <a href="/licence/" style="color: blue">here</a>.
+</i></p>
 </div>
 
 <br>
 {% include "footer.html" %}
+</div>
 {% endblock %}
