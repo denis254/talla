@@ -6,11 +6,9 @@
 
 {% block content %}
 {% include "navbar.html" %}
+<div id="outer">
 <div align = "center">
-<br>
-<br>
-<h1  style="color:blue" >Talla Global</h1>
-<hr>
+  <h2 class="h4" align = "center"><b>Talla Global</b></h2>
 {% if messages %}
 
     {% for message in messages %}
@@ -25,11 +23,12 @@
 
 {{form.as_p}}
 
-  <button  class="btn btn-primary" type="submit"><h5>Member Sign In</h5></button>
+  <button  class="btn btn-primary button4 button3" type="submit"><h5>Member Sign In</h5></button>
 </form>
 
 <br>
-<div style="color:blue"><a href="/register/"><b> Join Free </b> </a>  |  <a href="/accounts/password_reset/"> <b> Forgot your password? </b></a></div>
+<div style="color:blue"><a href="/register/"><b> Join Free </b> </a>  |  |  <a href="/accounts/password_reset/"> <b> Forgot your password? </b></a></div>
 </div><br><br><br><br><br>
 {% include "footer.html" %}
+</div>
 {% endblock %}
