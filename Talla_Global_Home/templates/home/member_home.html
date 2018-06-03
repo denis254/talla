@@ -6,55 +6,10 @@
 
 {% block content %}
 {% include "navbar.html" %}
+<div id="outer">
 {% if request.user.is_authenticated %}
 
-<h2 align = "center">Welcome, <b>{{ user.first_name }}</b></h2>
-<br>
-<div class= "row" align = "center">
-<div class="col-md-4 " >
-<img src="{% static "img/round-icon-surveys.jpeg"  %}" alt="My image" />
-<h4>Paid Surveys</h4>
-<br>
-<p>Get paid to take surveys.</p>
-</div>
-<div class="col-md-4 " >
-<img src="{% static "img/round-icon-refer.jpeg"  %}" alt="My image" />
-<h4>Refferal System</h4>
-<br>
-<p>Your downline and referral link.</p>
-</div>
-<div class="col-md-4 " >
-<img src="{% static "img/round-icon-statistics.png"  %}" alt="My image" />
-<h4>Statistics</h4>
-<br>
-<p>Keep track of your activities.</p>
-</div>
-</div>
-<hr>
-<div class= "row" align = "center">
-<div class="col-md-3 " >
-<h4>Account summary</h4>
-<p > <font style="color:#4169E1"> Username</font>: {{ user.username }}</p>
-<p><font style="color:#4169E1">First Name</font>: {{ user.first_name }}</p>
-<p><font style="color:#4169E1">Last Name</font>: {{ user.last_name }}</p>
-<p><font style="color:#4169E1">Email</font>: {{ user.email }}</p>
-<p><font style="color:#4169E1">Account Type</font>: {{ user.profile.User_Type }}</p>
-</div>
-<div class="col-md-3 " >
-<h4>Points balance</h4>
-<h1><b>{{ user.profile.Point_Balance }}</b></h1>
-<p>Used for withdrawals</p>
-</div>
-<div class="col-md-3 " >
-  <h4>Cash balance</h4>
-  <h1><b>{{ user.profile.Cash_Balance }}</b></h1>
-  <p>Used to upgrade</p>
-</div>
-<div class="col-md-3 " >
-<h4>Withdrawal</h4>
-<p>Ready to cash out? <br><br><font style="color:blue">REQUEST A PAYOUT</font> </p>
-</div>
-</div>
+<h2 class="h4" align = "center">Welcome, {{ user.first_name }} {{ user.last_name }}</h2>
 
 {% else %}
 
@@ -64,5 +19,5 @@
 
 {% endif %}
 {% include "footer.html" %}
-
+</div>
 {% endblock %}

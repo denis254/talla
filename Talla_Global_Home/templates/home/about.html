@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+{% block navbar %}
+{% include "navbar.html" %}
+{% endblock %}
+
+{% block slideshow %}
+{% include "home/slideshow.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div id="outer">
+
+  <h2 class="h4" align = "center"><b>About Talla Global</b></h2>
+<p>
+  Talla Global builds web software to help investors across the globe access World financial markets. We make it possible for both local and international investors to research and invest, any time, any where.
+</p>
+<p>
+Our founders, advisors and board of directors have extensive experience in global financial markets.
+</p>
+<p>
+We love what we do, and are infinitely curious.
+</p>
+<br>
+{% include "footer.html" %}
+</div>
+{% endblock %}
