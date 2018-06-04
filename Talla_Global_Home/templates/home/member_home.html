@@ -11,6 +11,36 @@
 
 <h2 class="h4" align = "center">Welcome, {{ user.first_name }} {{ user.last_name }}</h2>
 
+<div class="w3-row-padding" align = "center">
+  <div class="w3-third">
+  <img src="{% static "img/profile.png"  %}"
+   alt="CraftTechSolution Nairobi, Kenya"  />
+<h5 class="h4">Profile</h5>
+<h4><font style="color:blue">Name:</font> {{ user.first_name }} {{ user.last_name }}</h4>
+<h4><font style="color:blue">Username:</font> {{ user.username }} </h4>
+<h4><font style="color:blue">Phone Number:</font> {{ user.profile.Phone_Number }}</h4>
+<h4><font style="color:blue">Email:</font> {{ user.email }}</h4>
+</div>
+
+<div class="w3-third">
+  <img src="{% static "img/round-icon-statistics.png"  %}"
+   alt="Kenya Web Application Development Company | CraftTechSolution, East Africa"  />
+<h5 class="h4">Statistics</h5>
+<h4><font style="color:blue">Cash Invested:</font> {{ user.profile.Cash_Invested }} </h4>
+<h4><font style="color:blue">Interest:</font> {{ user.profile.Interest }}</h4>
+<h4><font style="color:blue">Investment Date:</font> {{ user.profile.Investment_Date }}</h4>
+</div>
+
+<div class="w3-third">
+  <img src="{% static "img/round-icon-refer.jpeg"  %}"
+   alt="About us | Kenya Web App Developers Team | CraftTechSolution, East Africa"  />
+<h5 class="h4">Referral Link</h5>
+<h4>Earn 2.5% on all your referrals deposit</h4>
+<h4>Your referral link is:</h4>
+<p style="color:red"><i>www.tallaglobal.com/?{{ user.username }}</i></p>
+</div>
+</div>
+
 {% else %}
 
 <p>You are not logged in</p>

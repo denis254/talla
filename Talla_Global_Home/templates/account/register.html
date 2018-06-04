@@ -29,7 +29,7 @@ Talla Global Values your Opinion and rewards you for your honesty and the time t
     {% csrf_token %}
     {% for field in form %}
    <p>
-    <div style="color:blue"> {{ field.label_tag }} </div>
+    <div style="color:blue"> <b>{{ field.label_tag }} </b></div>
      {{ field }}
 
      {% for error in field.errors %}

@@ -7,7 +7,6 @@
 {% block content %}
 {% include "navbar.html" %}
 <div id="outer">
-{% if request.user.is_authenticated %}
 
 <h2 class="h4" align = "center">
   Forms Of Payment
@@ -124,13 +123,6 @@
   </div>
 </div>
 
-{% else %}
-
-<p>You are not logged in</p>
-
-<a href="{% url 'login' %}">login</a>
-
-{% endif %}
 {% include "footer.html" %}
 <div id="outer">
 {% endblock %}

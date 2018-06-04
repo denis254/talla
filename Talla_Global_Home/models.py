@@ -3,6 +3,10 @@ from django.db import models
 # Create your models here.
 
 from django.db import models
+from django.utils import timezone
+
+import datetime
+
 
 from django.contrib.auth.models import User
 
@@ -12,9 +16,10 @@ from django.dispatch import receiver
 class Profile(models.Model):
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    Point_Balance = models.CharField(max_length=30, default = 0.00)
-    Cash_Balance = models.CharField(max_length=30, default = 0.00)
-    User_Type = models.CharField(max_length = 100, choices=[('Free','Free'),('Starter','Starter'),('Business','Business'),('Professional','Professional')], default = 'Free')
+    Phone_Number = models.CharField(max_length=30, null = True)
+    Cash_Invested = models.CharField(max_length=30, default = 0.00)
+    Interest = models.CharField(max_length=30, default = 0.00)
+    Investment_Date = models.DateTimeField('Investment Date', null = True)
 
 
     def __str__(self):  # __unicode__ for Python 2
